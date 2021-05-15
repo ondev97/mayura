@@ -93,6 +93,8 @@ myvenv
 db.sqlite3
 /static
 /media
+/mayuraweb/migrations
+/venv
 
 .env
 db.sqlite3
