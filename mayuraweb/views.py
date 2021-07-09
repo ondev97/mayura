@@ -67,7 +67,7 @@ def blog(request):
     blog = BlogPage.objects.filter().first()
     featured_blogs = BlogPost.objects.filter(is_featured=True)
     posts = BlogPost.objects.filter(is_featured=False)
-    allposts = BlogPost.objects.all()
+    # allposts = BlogPost.objects.all()
     data = {
         'blogpage' : blog,
         'featured_posts' : featured_blogs,
