@@ -103,7 +103,7 @@
                         <img src="{{ p.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <a href="blogpost/{{ p.slug }}"><h5 class="card-title" style="text-align: left;">{{ p.title|slice:'20' }}</h5></a>
-                            <p class="tiny-text">Date & Comments</p>
+                            <p class="tiny-text">{{ p.date }}</p>
                             <div class="card-text" style="padding-bottom: 2.5rem;">{{ p.content_2|safe|slice:'100' }}...</div>
                         </div>
                     </div>
