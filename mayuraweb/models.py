@@ -38,6 +38,7 @@ class Product(models.Model):
     description = RichTextField(blank=True)
     price = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/homepage/products')
+    url = models.CharField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -92,7 +93,8 @@ class VideoBlogSection(models.Model):
 
     video_title = models.CharField(max_length=250)
     video_description = RichTextField(blank=True)
-    video_url = models.CharField(max_length=1000)
+    video_url_1 = models.CharField(max_length=1000, null=True, blank=True)
+    video_url_2 = models.CharField(max_length=1000, null=True, blank=True)
 
     blog_title = models.CharField(max_length=250)
     blog_description = RichTextField(blank=True)
