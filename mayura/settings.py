@@ -155,6 +155,7 @@ ADMIN_REORDER = (
                 'mayuraweb.Product',
                 'mayuraweb.MaterialSection',
                 'mayuraweb.TestimonialSection',
+                'mayuraweb.VideoBlogSection',
                 ),
      },
     # Second group
