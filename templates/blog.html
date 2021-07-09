@@ -100,11 +100,11 @@
             {% for p in other_posts %}
                 <div class="col-sm text-center main-card-1">
                     <div class="card mx-auto" style="width: 24rem;">
-                        <img style="max-height: 150px" src="{{ p.image.url }}" class="card-img-top" alt="...">
+                        <img src="{{ p.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <a href="blogpost/{{ p.slug }}"><h5 class="card-title" style="text-align: left;">{{ p.title|slice:'20' }}</h5></a>
                             <p class="tiny-text">Date & Comments</p>
-                            <div class="card-text" style="padding-bottom: 2.5rem;">{{ p.content_1|safe|slice:'100' }}</div>
+                            <div class="card-text" style="padding-bottom: 2.5rem;">{{ p.content_2|safe|slice:'100' }}...</div>
                         </div>
                     </div>
                 </div>
