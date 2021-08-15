@@ -90,7 +90,7 @@
                     </div>
                     <div class="product-text text-center">
                         <h3 >{{ s.title }}</h3>
-                        <p>{{ s.description|safe }}</p>
+                        <div style="min-height: 100px">{{ s.description|safe }}</div>
                         <p><i class="bi bi-tag"></i> {{ s.price }}</p>
                         <a href={{ s.url }}>Shop Now</a>
                     </div>
