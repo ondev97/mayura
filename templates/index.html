@@ -212,7 +212,7 @@
                         <img src="{{ s.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ s.title }}</h5>
-                            <p class="card-text">{{ s.content_2|safe|slice:'140' }}...</p>
+                            <div class="card-text">{{ s.content_2|safe|slice:'140' }}...</div>
                             <a href="blogpost/{{ s.slug }}" class="card-button">Read More</a>
                         </div>
                     </div>
