@@ -10,11 +10,12 @@ from mayuraweb.models import *
 def index(request):
     sec1 = HomeSection.objects.filter().first()
     sec2 = ProductSection.objects.filter().first()
-    sec3 = Product.objects.all()[:3]
+    sec3 = Product.objects.all()
     sec4 = MaterialSection.objects.filter().first()
     sec5 = TestimonialSection.objects.filter().first()
     sec6 = VideoBlogSection.objects.filter().first()
     sec7 = BlogPost.objects.filter(display_in_homepage=True)[:3]
+    print(sec7[0].content_2)
     data = {
         'sec1' : sec1,
         'sec2' : sec2,

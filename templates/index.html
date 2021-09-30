@@ -85,9 +85,39 @@
 
             {% for s in sec3 %}
                 <div class="col-md-4" >
-                    <div>
-                        <img src="{{ s.image.url }}" alt="" style="width: 100%;">
+{#                    <div>#}
+{#                        <img src="{{ s.image.url }}" alt="" style="width: 100%;">#}
+{#                    </div>#}
+                    <div id="carro{{ s.id }}" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ s.image.url }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ s.image.url }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ s.image.url }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ s.image.url }}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carro{{ s.id }}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
                     <div class="product-text text-center">
                         <h3 >{{ s.title }}</h3>
                         <div style="min-height: 100px">{{ s.description|safe }}</div>
@@ -208,12 +238,12 @@
         <div class="row align-items-center">
             {% for s in sec7 %}
                 <div class="col-sm text-center main-card-1">
-                    <div class="card mx-auto" style="width: 24rem;">
+                    <div class="card mx-auto" style="width: 22rem; height: 35rem; position: relative">
                         <img src="{{ s.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ s.title }}</h5>
-                            <div class="card-text">{{ s.content_2|safe|slice:'140' }}...</div>
-                            <a href="blogpost/{{ s.slug }}" class="card-button">Read More</a>
+                            <h5 class="card-title">{{ s.title|slice:'50' }}</h5>
+                            <div class="card-text" style="text-align: justify;">{{ s.content_2|safe|slice:'225' }}</div>
+                            <a style="position: absolute; bottom: 2rem; left: 6.55rem" href="blogpost/{{ s.slug }}" class="card-button">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -230,19 +260,29 @@
                 <h4> We Are Available At :  </h4>
             </div>
             <div class="col-sm">
-                <img style="height: 88px" src="{% static './wetransfer/18.png' %}" alt="" class="mx-auto d-block">
+                <a href="https://google.com">
+                    <img src="{% static './img/Kapruka.png' %}" alt="" class="mx-auto d-block img-fluid">
+                </a>
             </div>
             <div class="col-sm">
-                <img src="{% static './img/Logo-1.png' %}" alt="" class="mx-auto d-block">
+                <a href="https://google.com">
+                    <img src="{% static './img/Logo-1.png' %}" alt="" class="mx-auto d-block img-fluid">
+                </a>
             </div>
             <div class="col-sm">
-                <img src="{% static './img/Logo-2.png' %}" alt="" class="mx-auto d-block">
+                <a href="https://google.com">
+                    <img src="{% static './img/Logo-2.png' %}" alt="" class="mx-auto d-block img-fluid">
+                </a>
             </div>
             <div class="col-sm">
-                <img src="{% static './img/Logo-3.png' %}" alt="" class="mx-auto d-block">
+                <a href="https://google.com">
+                    <img src="{% static './img/Logo-3.png' %}" alt="" class="mx-auto d-block img-fluid">
+                </a>
             </div>
             <div class="col-sm">
-                <img src="{% static './img/Logo-4.png' %}" alt="" class="mx-auto d-block">
+                <a href="https://google.com">
+                    <img src="{% static './img/Logo-4.png' %}" alt="" class="mx-auto d-block img-fluid">
+                </a>
             </div>
         </div>
     </div>
