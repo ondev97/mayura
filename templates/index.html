@@ -212,7 +212,7 @@
 <div class="video-section">
     <div class="container">
         <div class="row align-items-center">
-            <h3 align="center">{{ sec6.video_title }}</h3>
+            <h1 align="center" style="font-weight: 900; margin-bottom: 2.5rem">{{ sec6.video_title }}</h1>
             <div class="row" style="padding-top: 20px">
                 <div class="col-md-6 ">
                 <div class="iframe-container">
@@ -242,9 +242,9 @@
                     <div class="card mx-auto" style="width: 22rem; height: 35rem; position: relative">
                         <img src="{{ s.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ s.title|slice:'50' }}</h5>
+                            <h5 class="card-title">{{ s.title|slice:'40' }}</h5>
                             {% if s.excerpt %}
-                                <div class="card-text" style="text-align: justify;">{{ s.excerpt }}</div>
+                                <div class="card-text" style="text-align: justify; margin-top: 1rem">{{ s.excerpt }}</div>
                             {% endif %}
                             <a style="position: absolute; bottom: 1rem; left: 6.55rem" href="blogpost/{{ s.slug }}" class="card-button">Read More</a>
                         </div>
