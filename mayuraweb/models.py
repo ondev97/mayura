@@ -112,7 +112,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=250)
     category = models.CharField(max_length=250, blank=True)
     author = models.CharField(max_length=250, blank=True)
-    excerpt = models.TextField(max_length=250, null=True, blank=True)
+    excerpt = models.TextField(max_length=220, null=True, blank=True)
     content_1 = RichTextField(blank=True)
     is_content_2_in_quotation = models.BooleanField(default=False)
     content_2 = RichTextField(blank=True)
