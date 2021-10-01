@@ -243,7 +243,7 @@
                         <img src="{{ s.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ s.title|slice:'50' }}</h5>
-                            <div class="card-text" style="text-align: justify;">{{ s.content_2|safe }}</div>
+                            <div class="card-text" style="text-align: justify;">{{ s.content_2|safe|slice:'300' }}</div>
                             <a style="position: absolute; bottom: 2rem; left: 6.55rem" href="blogpost/{{ s.slug }}" class="card-button">Read More</a>
                         </div>
                     </div>
